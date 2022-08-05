@@ -46,7 +46,7 @@ class menu extends StatelessWidget {
                         height: 100,
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(left: 11),
+                        padding: const EdgeInsets.only(left: 10),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
