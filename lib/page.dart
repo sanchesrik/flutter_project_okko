@@ -72,40 +72,59 @@ class product_page extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.only(top: 8),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 3),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: OutlinedButton(
+                          onPressed: () {},
+                          style: OutlinedButton.styleFrom(
+                              side:
+                                  BorderSide(color: Colors.green, width: 2.5)),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                "Добавить в корзину",
+                                style: TextStyle(
+                                    fontSize: 20,
+                                    color: Color.fromARGB(255, 113, 206, 110)),
+                              ),
+                              SizedBox(
+                                width: 5,
+                              ),
+                              Icon(
+                                CupertinoIcons.cart,
+                                color: Color.fromARGB(255, 113, 206, 110),
+                              )
+                            ],
+                          )),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 3),
               child: Row(
                 children: [
                   Expanded(
-                    child: ElevatedButton(
-                        onPressed: () {},
-                        style: ElevatedButton.styleFrom(primary: Colors.green),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              "Добавить в корзину",
-                              style: TextStyle(fontSize: 20),
-                            ),
-                            Icon(CupertinoIcons.cart)
-                          ],
+                    child: OutlinedButton(
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                        style: OutlinedButton.styleFrom(
+                            side: BorderSide(color: Colors.red, width: 2.5)),
+                        child: Text(
+                          "Назад",
+                          style: TextStyle(
+                              fontSize: 20,
+                              color: Color.fromARGB(255, 207, 102, 102)),
                         )),
                   ),
                 ],
               ),
-            ),
-            Row(
-              children: [
-                Expanded(
-                  child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.pop(context);
-                      },
-                      style: ElevatedButton.styleFrom(primary: Colors.red),
-                      child: Text(
-                        "Назад",
-                        style: TextStyle(fontSize: 20),
-                      )),
-                ),
-              ],
             )
           ],
         ),
